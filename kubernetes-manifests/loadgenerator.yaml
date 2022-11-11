@@ -47,6 +47,7 @@ spec:
               exit 1
           fi
         name: frontend-check
+        imagePullPolicy: IfNotPresent
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
