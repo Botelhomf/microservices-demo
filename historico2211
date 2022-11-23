@@ -1,0 +1,91 @@
+    1  curl https://releases.rancher.com/install-docker/20.10.sh | sh
+    2  sudo groupadd docker
+    3  sudo usermod -aG docker $USER
+    4  exit
+    5  groups
+    6  id
+    7  git config --global user.name "Botelhomf"
+    8  git config --global user.email "danibmf@gmail.com"
+    9  git config --global core.autocrlf false
+   10  git config --global core.filemode false
+   11  git config --global color.ui true
+   12  ssh-keygen -o -t ed25519 -C "danibmf@gmail.com" -N "" -f ~/.ssh/id_ed25519
+   13  cat ~/.ssh/id_ed25519.pub
+   14  cd .ssh
+   15  curl https://github.com/botelhomf.keys >> authorized_keys 
+   16  cd ..
+   17  git clone git@github.com:Botelhomf/microservices-demo.git
+   18  ls
+   19  cd microservices-demo/
+   20  sudo apt-get install apt-transport-https ca-certificates gnupg
+   21  echo &quot;deb [signed-by=/usr/share/keyrings/cloud.google.gpg]
+   22  https://packages.cloud.google.com/apt cloud-sdk main&quot; | sudo tee -a
+   23  clear
+   24  echo &quot;deb [signed-by=/usr/share/keyrings/cloud.google.gpg]
+   25  https://packages.cloud.google.com/apt cloud-sdk main&quot; | sudo tee -a
+   26  /etc/apt/sources.list.d/google-cloud-sdk.list
+   27  echo &quot;deb [signed-by=/usr/share/keyrings/cloud.google.gpg]
+   28  https://packages.cloud.google.com/apt cloud-sdk main&quot; | sudo tee -a
+   29  echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+   30  curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring
+   31  curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+   32  sudo apt-get update && sudo apt-get install google-cloud-cli
+   33  gcloud info
+   34  cat /etc/apt/sources.list.d/google-cloud-sdk.list
+   35  sudo apt-get install kubectl
+   36  kubectl version --output=yaml
+   37  gcloud init
+   38  export PROJECT_ID=my-project-2211-369500
+   39  vim ~/.bashrc
+   40  USE_GKE_GCLOUD_AUTH_PLUGIN=true
+   41  echo $PROJECT_ID
+   42  vim build.sh 
+   43  bash build.sh 
+   44  vim build.sh 
+   45  bash build.sh 
+   46  vim build.sh 
+   47  bash build.sh 
+   48  touch push.sh
+   49  chmod +x push.sh 
+   50  vim push.sh 
+   51  gcloud project list
+   52  gcloud init
+   53  gcloud project list
+   54  gcloud projects list
+   55  bash push.sh 
+   56  vim build.sh 
+   57  vim push.sh 
+   58  bash push.sh 
+   59  vim push.sh 
+   60  vim build.sh 
+   61  vim push.sh 
+   62  bash push.sh 
+   63  docker image ls
+   64  vim push.sh 
+   65  bash push.sh 
+   66  gcloud init
+   67  bash push.sh 
+   68  gcloud container clusters get-credentials demo-cluster
+   69  gcloud container clusters create demo-cluster --num-nodes=1
+   70  gcloud container clusters get-credentials demo-cluster
+   71  bash push.sh 
+   72  gcloud container clusters get-credentials demo-cluster
+   73  sudo apt install google-cloud-cli google-cloud-cli-gke-gcloud-auth-plugin google-cloud-sdk-gke-gcloud-auth-plugin
+   74  gcloud container clusters get-credentials demo-cluster
+   75  bash push.sh 
+   76  kubectl get nodes
+   77  export PROJECT_ID=my-project-2211-369500
+   78  export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+   79  vim ~/.bashrc
+   80  kubectl get nodes
+   81  gcloud container clusters get-credentials demo-cluster
+   82  kubectl get nodes
+   83  docker image ls
+   84  docker push gcr.io/my-project-2211-369500/emailservice:latest
+   85  gcloud init
+   86  docker push gcr.io/my-project-2211-369500/emailservice:latest
+   87  gcloud auth configure-docker
+   88  docker push gcr.io/my-project-2211-369500/emailservice:latest
+   89  bash push.sh 
+   90  cat history >> historico2211
+   91  history >> historico2211
